@@ -1,5 +1,5 @@
 # IoTtools
-## (Internet of Things Tools)
+## Internet of Things Tools
 Scripts and tools for embedded Linux boards
 
  - Raspberry Pi
