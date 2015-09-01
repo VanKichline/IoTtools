@@ -3,7 +3,7 @@
 
 from BaseHTTPServer import BaseHTTPRequestHandler,HTTPServer
 
-PORT_NUMBER = 8080
+PORT_NUMBER = 5050
 
 class reqHandler(BaseHTTPRequestHandler):
 
