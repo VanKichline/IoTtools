@@ -53,7 +53,12 @@ tightvncserver
 
 # Get some of my repos
 
+git config --global user.name "[user name]"
+git config --global user.email [user email]
+
 mkdir work
 cd work
 git clone https://github.com/vankichline/IoTtools.git
+
+# At this point, it's time to unhook the monitor, keyboard and mouse and connect via ssh
 
