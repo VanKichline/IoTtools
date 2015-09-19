@@ -1,0 +1,59 @@
+Part 1 from notes -- RPi was not running yet;
+
+Set up Raspian from noobs w/ network attached.
+Selected 512 MB data partition + raspian to see what I get.
+
+raspi-config:
+Fist, go to 8 (Advanced) and select A0: update to latest version
+2: change user password for pi (do not leave as Raspberry)
+4: change lacale:
+	I1: uncheck en_GB, check en_US.UTF-8, also select as default locale
+	I2: timezone -- I selected Pacific Ocean.  We'll see if this is PST
+	I3: difficult; I selected 105 key (intl) PC, default AltGr, no Compose, no ctrl-alt-backspace
+5: Enable camera
+8: Advanced
+	Change hostname (I have multiple RPis)
+	enable SSH, SPI, I2C, serail
+Finished
+
+Boot to Raspian
+
+Part 2:
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo rpi-update
+sudo apt-get dist-upgrade
+sudo reboot
+
+Part 3: 
+
+sudo adduser van
+
+
+# do 'groups pi' and 'groups [new user name]'
+# add the missing groups (except pi) to the new user, like:
+sudo usermod -a -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input,spi,i2c,gpio [new user name]
+
+# add uer to sudos
+sudo visudo
+# copy pi (ctrl-k, ctrl-u, ctrl-u) and change pi to [new user name]
+
+sudo reboot
+# log in as new user
+
+Part 4:
+
+# install tightvnc
+sudo apt-get install tightvncserver
+tightvncserver
+# (supply an 8 character password)
+
+##?? How do I configure tightvncserver to start up automaticaly?
+
+# Get some of my repos
+
+mkdir work
+cd work
+git clone https://github.com/vankichline/IoTtools.git
+
