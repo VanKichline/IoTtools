@@ -62,3 +62,13 @@ git clone https://github.com/vankichline/IoTtools.git
 
 # At this point, it's time to unhook the monitor, keyboard and mouse and connect via ssh
 
+Part 5: Must-haves
+
+cd work
+git clone git://git.drogon.net/wiringPi	# wiringPi
+cd wiringPi
+[git pull origin]
+./build
+gpio -v
+gpio readall
+
