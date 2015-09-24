@@ -72,3 +72,9 @@ cd wiringPi
 gpio -v
 gpio readall
 
+cd ..
+git clone https://github.com/VanKichline/IoTtools.git
+
+# Install node
+curl -sLS https://apt.adafruit.com/add | sudo bash
+sudo apt-get install node
